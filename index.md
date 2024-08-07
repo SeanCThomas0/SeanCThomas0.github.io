@@ -1,6 +1,6 @@
 ---
 layout: Home
-title: Home
+title: 
 ---
 
 # Sean Thomas - Projects

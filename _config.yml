@@ -5,6 +5,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   My project portfolio showcasing various web applications.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://<SeanCThomas0>.github.io" # the base hostname & protocol for your site
+theme:minima
 
 # Build settings
 markdown: kramdown
