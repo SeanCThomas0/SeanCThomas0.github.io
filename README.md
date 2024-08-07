@@ -35,11 +35,3 @@ Welcome to my portfolio repository! This repository showcases the projects I’v
 ## Getting Started
 
 To view the live portfolio, visit [Sean's Portfolio](https://SeanCThomas0.github.io). The site is built using GitHub Pages and the Minima theme.
-
-### Local Development
-
-To run the site locally, follow these steps:
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/SeanCThomas0/portfolio.git
