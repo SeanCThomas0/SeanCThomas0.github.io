@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: default
 title: PrivyData
 ---
 
@@ -21,4 +21,4 @@ This project ensures the privacy of individual records while providing insights 
 - **Ansible**: Automates deployment and configuration management, ensuring consistency across environments.
 - **Travis CI**: Provides continuous integration services to automate testing and deployment processes.
 
-[Back to Home](../index.md)
+[Back to Home](index.md)

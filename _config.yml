@@ -1,15 +1,9 @@
-# Site settings
-title: Sean Thomas - Projects
-email: seanthomasthedev@gmail.com
+title: Sean's Portfolio
 description: >- # this means to ignore newlines until "baseurl:"
-  My project portfolio showcasing various web applications.
+  A showcase of my work and projects.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://<SeanCThomas0>.github.io" # the base hostname & protocol for your site
-theme:minima
+url: "https://SeanCThomas0.github.io" # the base hostname & protocol for your site
+theme: minima
 
 # Build settings
 markdown: kramdown
-
-# Include the projects directory
-include:
-  - _projects
