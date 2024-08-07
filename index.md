@@ -1,13 +1,13 @@
 ---
-layout: home
-title: Welcome
+layout: default
+title: Home
 ---
 
-# Welcome to My Portfolio
+# Sean Thomas - Projects
 
-Hi! I'm [Your Name], a software developer specializing in [your specialization]. Here are some of my projects:
+Welcome to my project portfolio. Here are some of the projects I've worked on:
 
-## Projects
+- [JobTrackr](projects/jobtrackr.md) - A web application to help users manage and track their job applications.
+- [PrivyData](projects/privydata.md) - A web application designed to analyze student data while ensuring the privacy of individual records.
 
-- [Project One](./projects/project1.md)
-- [Project Two](./projects/project2.md)
+Connect with me on [GitHub](https://github.com/SeanCThomas0) | [LinkedIn](https://linkedin.com/in/seancthomas0)
