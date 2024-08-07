@@ -20,5 +20,5 @@ This project ensures the privacy of individual records while providing insights 
 - **Nginx**: Used as a web server and reverse proxy to handle HTTP requests efficiently and securely.
 - **Ansible**: Automates deployment and configuration management, ensuring consistency across environments.
 - **Travis CI**: Provides continuous integration services to automate testing and deployment processes.
-
+ 
 [Back to Home](https://SeanCThomas0.github.io)

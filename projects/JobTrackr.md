@@ -20,5 +20,5 @@ JobTrackr is a web application designed to help users manage and keep track of t
 - **PostgreSQL**: A robust relational database management system used for storing application data.
 - **Kubernetes**: For orchestrating containerized applications, ensuring scalability and high availability.
 - **Ansible**: For automating the deployment and configuration of the application.
-
+ 
 [Back to Home](https://SeanCThomas0.github.io)
