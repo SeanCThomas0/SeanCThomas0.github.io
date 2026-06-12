@@ -5,41 +5,112 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sean Thomas</title>
 <style>
+  :root {
+    --bg: #fdfbf7;
+    --ink: #21201c;
+    --quiet: #79746a;
+    --accent: #8c2f1b;
+    --rule: #e7e2d8;
+  }
+  * { box-sizing: border-box; }
   body {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 0 20px;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 64px 24px 80px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     font-size: 16px;
-    line-height: 1.55;
-    color: #222;
-    background: #fff;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--bg);
   }
-  h1 { font-size: 1.4em; margin-bottom: 0; }
-  h2 { font-size: 1.1em; margin-top: 2.2em; }
-  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  ::selection { background: #f0ddd0; }
+
+  h1, h2, h3 {
+    font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+    font-weight: normal;
+  }
+  h1 {
+    font-size: 2.1em;
+    letter-spacing: -0.015em;
+    margin: 0 0 2px;
+  }
+  h2 {
+    font-size: 1.25em;
+    font-style: italic;
+    color: var(--accent);
+    margin: 2.8em 0 0.9em;
+    padding-bottom: 0.35em;
+    border-bottom: 1px solid var(--rule);
+  }
+  h3 {
+    font-size: 1.08em;
+    font-weight: bold;
+    margin: 1.6em 0 0.2em;
+  }
+
   p { margin: 0.6em 0; }
-  a { color: #0b62a4; }
-  ul { padding-left: 1.2em; margin: 0.4em 0; }
-  li { margin: 0.25em 0; }
-  .quiet { color: #777; }
-  .small { font-size: 0.88em; }
-  code {
-    font-family: Consolas, Menlo, monospace;
-    font-size: 0.88em;
-    background: #f4f4f4;
-    padding: 1px 4px;
+  ul { padding-left: 1.25em; margin: 0.4em 0; }
+  li { margin: 0.3em 0; }
+  li::marker { color: var(--accent); }
+
+  a {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: #cf9a85;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color 0.15s, text-decoration-color 0.15s;
   }
-  hr { border: none; border-top: 1px solid #ddd; margin: 2.5em 0 1.5em; }
+  a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+  .quiet { color: var(--quiet); }
+  .small { font-size: 0.86em; }
+  .dates {
+    font-family: ui-monospace, Consolas, Menlo, monospace;
+    font-size: 0.72em;
+    color: var(--quiet);
+    letter-spacing: 0.02em;
+  }
+
+  code {
+    font-family: ui-monospace, Consolas, Menlo, monospace;
+    font-size: 0.85em;
+    background: #f3efe6;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 1px 5px;
+  }
+
+  header { margin-bottom: 2.5em; }
+  header .links { margin-top: 0.4em; }
+  header .links a { margin-right: 4px; }
+  header .links span { color: #cdc7ba; margin-right: 4px; }
+
+  footer {
+    margin-top: 4em;
+    padding-top: 1.2em;
+    border-top: 1px solid var(--rule);
+    color: var(--quiet);
+    font-size: 0.85em;
+  }
+
+  @media (max-width: 480px) {
+    body { padding-top: 40px; }
+    h1 { font-size: 1.7em; }
+  }
 </style>
 </head>
 <body>
 
-<h1>Sean Thomas</h1>
-<p class="quiet">Software engineer in San Francisco.<br>
-<a href="https://github.com/SeanCThomas0">GitHub</a> /
-<a href="https://linkedin.com/in/sean-thomas-2002">LinkedIn</a> /
-<a href="mailto:seanthomasthedev@gmail.com">seanthomasthedev@gmail.com</a></p>
+<header>
+  <h1>Sean Thomas</h1>
+  <p class="quiet">Software engineer in San Francisco.</p>
+  <p class="links small">
+    <a href="https://github.com/SeanCThomas0">GitHub</a> <span>·</span>
+    <a href="https://linkedin.com/in/sean-thomas-2002">LinkedIn</a> <span>·</span>
+    <a href="mailto:seanthomasthedev@gmail.com">seanthomasthedev@gmail.com</a>
+  </p>
+</header>
 
 <p>I'm a founding engineer at Tex Software. I spend most of my time on
 document ingestion — OCR, entity resolution, and getting structured data
@@ -48,7 +119,7 @@ City of Fort Wayne, and studied CS and math at Purdue (class of 2024).</p>
 
 <h2>Work</h2>
 
-<h3>Tex Software <span class="quiet small">(founding engineer, 2026–present)</span></h3>
+<h3>Tex Software <span class="dates">founding engineer · 2026–present</span></h3>
 <ul>
 <li>Built the OCR/document-ingestion pipeline. It has processed over 25 million documents so far.</li>
 <li>Entity resolution and record linkage to dedupe records across sources that all disagree with each other.</li>
@@ -56,7 +127,7 @@ City of Fort Wayne, and studied CS and math at Purdue (class of 2024).</p>
 <li>The React frontend (auth, role-based access) and a MapLibre + PMTiles map that stays fast on large geospatial datasets.</li>
 </ul>
 
-<h3>City of Fort Wayne <span class="quiet small">(GIS software engineer, 2025–2026)</span></h3>
+<h3>City of Fort Wayne <span class="dates">GIS software engineer · 2025–2026</span></h3>
 <ul>
 <li>RAG chatbot over city documents (Python, Azure AI Search).</li>
 <li>Automated a bunch of geospatial processing that was being done by hand.</li>
@@ -87,8 +158,9 @@ learn Kubernetes. React/TypeScript/Postgres.</p>
 Postgres. I've also shipped things in Java, Rust, C++, and C#. Comfortable
 with AWS, Azure, Docker, and Terraform.</p>
 
-<hr>
-<p class="quiet small">Last updated June 2026.</p>
+<footer>
+Last updated June 2026.
+</footer>
 
 </body>
 </html>
