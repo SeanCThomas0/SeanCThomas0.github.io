@@ -1,272 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sean Thomas</title>
-  <style>
-    :root {
-      --paper: #faf8f3;
-      --ink: #1c1b18;
-      --faded: #6f6a5f;
-      --line: #e2ddd2;
-      --accent: #b3501e;
-      --code-bg: #f1ede4;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: var(--paper);
-      color: var(--ink);
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 17px;
-      line-height: 1.6;
-    }
-
-    ::selection { background: #f3d9c8; }
-
-    a {
-      color: var(--ink);
-      text-decoration: underline;
-      text-decoration-color: var(--accent);
-      text-underline-offset: 3px;
-    }
-    a:hover { color: var(--accent); }
-
-    .wrap {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 72px 24px 96px;
-    }
-
-    .mono {
-      font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Consolas, monospace;
-      font-size: 0.82em;
-    }
-
-    /* header */
-    header { margin-bottom: 64px; }
-    header h1 {
-      font-size: 1.6rem;
-      font-weight: normal;
-      margin-bottom: 4px;
-    }
-    header .sub {
-      color: var(--faded);
-      margin-bottom: 20px;
-    }
-    header nav {
-      font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Consolas, monospace;
-      font-size: 0.8rem;
-    }
-    header nav a { margin-right: 18px; }
-
-    .intro {
-      margin-bottom: 64px;
-    }
-    .intro p + p { margin-top: 14px; }
-
-    /* sections */
-    h2 {
-      font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Consolas, monospace;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--faded);
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 8px;
-      margin-bottom: 28px;
-    }
-
-    section { margin-bottom: 64px; }
-
-    /* entries */
-    .entry { margin-bottom: 36px; }
-    .entry:last-child { margin-bottom: 0; }
-
-    .entry .head {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .entry .head h3 {
-      font-size: 1.05rem;
-      font-weight: 600;
-    }
-    .entry .head .where { color: var(--faded); font-style: italic; }
-    .entry .dates {
-      font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Consolas, monospace;
-      font-size: 0.75rem;
-      color: var(--faded);
-      white-space: nowrap;
-    }
-    .entry p { margin-top: 8px; font-size: 0.97rem; }
-    .entry ul {
-      margin-top: 10px;
-      padding-left: 20px;
-      font-size: 0.95rem;
-    }
-    .entry ul li { margin-bottom: 6px; }
-    .entry ul li::marker { color: var(--accent); }
-
-    .stack {
-      margin-top: 10px;
-      font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Consolas, monospace;
-      font-size: 0.72rem;
-      color: var(--faded);
-    }
-
-    code {
-      font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Consolas, monospace;
-      font-size: 0.82em;
-      background: var(--code-bg);
-      padding: 1px 5px;
-      border-radius: 3px;
-    }
-
-    /* skills */
-    .skills dt {
-      font-family: ui-monospace, 'SF Mono', 'Cascadia Code', Consolas, monospace;
-      font-size: 0.75rem;
-      color: var(--faded);
-      margin-bottom: 2px;
-    }
-    .skills dd {
-      margin-bottom: 14px;
-      font-size: 0.95rem;
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding-top: 24px;
-      color: var(--faded);
-      font-size: 0.85rem;
-    }
-
-    @media (max-width: 480px) {
-      .wrap { padding-top: 48px; }
-      .entry .dates { white-space: normal; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sean Thomas</title>
+<style>
+  body {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #222;
+    background: #fff;
+  }
+  h1 { font-size: 1.4em; margin-bottom: 0; }
+  h2 { font-size: 1.1em; margin-top: 2.2em; }
+  h3 { font-size: 1em; margin-bottom: 0.2em; }
+  p { margin: 0.6em 0; }
+  a { color: #0b62a4; }
+  ul { padding-left: 1.2em; margin: 0.4em 0; }
+  li { margin: 0.25em 0; }
+  .quiet { color: #777; }
+  .small { font-size: 0.88em; }
+  code {
+    font-family: Consolas, Menlo, monospace;
+    font-size: 0.88em;
+    background: #f4f4f4;
+    padding: 1px 4px;
+  }
+  hr { border: none; border-top: 1px solid #ddd; margin: 2.5em 0 1.5em; }
+</style>
 </head>
 <body>
-  <div class="wrap">
 
-    <header>
-      <h1>Sean Thomas</h1>
-      <div class="sub">Software engineer in San Francisco</div>
-      <nav>
-        <a href="https://github.com/SeanCThomas0">github</a>
-        <a href="https://linkedin.com/in/sean-thomas-2002">linkedin</a>
-        <a href="mailto:seanthomasthedev@gmail.com">email</a>
-      </nav>
-    </header>
+<h1>Sean Thomas</h1>
+<p class="quiet">Software engineer in San Francisco.<br>
+<a href="https://github.com/SeanCThomas0">GitHub</a> /
+<a href="https://linkedin.com/in/sean-thomas-2002">LinkedIn</a> /
+<a href="mailto:seanthomasthedev@gmail.com">seanthomasthedev@gmail.com</a></p>
 
-    <div class="intro">
-      <p>
-        I'm a founding engineer at Tex Software, where I work on document
-        ingestion at scale — OCR pipelines, entity resolution, and geospatial
-        tooling over tens of millions of records.
-      </p>
-      <p>
-        Before that I did GIS work for the City of Fort Wayne, and before
-        that I studied computer science and math at Purdue. On the side I'm
-        building a location-based prediction market.
-      </p>
-    </div>
+<p>I'm a founding engineer at Tex Software. I spend most of my time on
+document ingestion — OCR, entity resolution, and getting structured data
+out of 25+ million messy documents. Before this I did GIS work for the
+City of Fort Wayne, and studied CS and math at Purdue (class of 2024).</p>
 
-    <section>
-      <h2>Work</h2>
+<h2>Work</h2>
 
-      <div class="entry">
-        <div class="head">
-          <h3>Tex Software <span class="where">— founding software engineer</span></h3>
-          <span class="dates">2026–now</span>
-        </div>
-        <ul>
-          <li>Built an OCR and document-ingestion pipeline that has processed 25M+ documents into structured data.</li>
-          <li>Designed entity-resolution and record-linkage systems to deduplicate records across messy, inconsistent sources.</li>
-          <li>Wrote automated ingestion pipelines covering all 50 states, built to recover from failures without babysitting.</li>
-          <li>Built the React front end (RBAC, auth) and a MapLibre/PMTiles map that keeps large geospatial datasets fast in the browser.</li>
-        </ul>
-      </div>
+<h3>Tex Software <span class="quiet small">(founding engineer, 2026–present)</span></h3>
+<ul>
+<li>Built the OCR/document-ingestion pipeline. It has processed over 25 million documents so far.</li>
+<li>Entity resolution and record linkage to dedupe records across sources that all disagree with each other.</li>
+<li>Automated ingestion across all 50 states, designed to recover from failures on its own.</li>
+<li>The React frontend (auth, role-based access) and a MapLibre + PMTiles map that stays fast on large geospatial datasets.</li>
+</ul>
 
-      <div class="entry">
-        <div class="head">
-          <h3>City of Fort Wayne <span class="where">— GIS software engineer</span></h3>
-          <span class="dates">2025–2026</span>
-        </div>
-        <ul>
-          <li>Built a RAG chatbot over city documents with Python and Azure AI Search.</li>
-          <li>Automated geospatial data processing workflows that were previously done by hand.</li>
-        </ul>
-      </div>
-    </section>
+<h3>City of Fort Wayne <span class="quiet small">(GIS software engineer, 2025–2026)</span></h3>
+<ul>
+<li>RAG chatbot over city documents (Python, Azure AI Search).</li>
+<li>Automated a bunch of geospatial processing that was being done by hand.</li>
+</ul>
 
-    <section>
-      <h2>Projects</h2>
+<h2>Projects</h2>
 
-      <div class="entry">
-        <div class="head">
-          <h3>Kald</h3>
-          <span class="dates">in progress</span>
-        </div>
-        <p>
-          A location-based prediction market with native iOS and Android apps.
-          Most of the interesting work is in making it hard to cheat:
-        </p>
-        <ul>
-          <li>Identity is tied to device-bound, non-exportable ECDSA P-256 keys — every action is a signed request with server-issued nonces and replay protection.</li>
-          <li>Money movement lives entirely in <code>SECURITY DEFINER</code> Postgres functions with row-level locking and idempotency keys; RLS on every table.</li>
-          <li>Outcomes settle through a trust-weighted multi-resolver consensus engine, with signed disputes and anti-snipe hold windows, fed by GPS and device-integrity evidence.</li>
-        </ul>
-        <div class="stack">swift · kotlin · typescript · deno · postgres · supabase</div>
-      </div>
+<h3>Kald</h3>
+<p>A location-based prediction market — native iOS (SwiftUI) and Android
+(Jetpack Compose) apps on a Postgres/Supabase backend. The interesting part
+is making it hard to cheat: identity is device-bound ECDSA keys with signed
+requests and replay protection, all money movement happens inside
+<code>SECURITY DEFINER</code> Postgres functions with row locking and
+idempotency keys, and outcomes settle through a trust-weighted multi-resolver
+consensus system with signed disputes.</p>
 
-      <div class="entry">
-        <div class="head">
-          <h3>PrivyData</h3>
-        </div>
-        <p>
-          Web app for running statistical queries on student data under
-          differential privacy (OpenDP), so aggregate analysis can't leak
-          individual records.
-        </p>
-        <div class="stack">python · flask · opendp · numpy · nginx</div>
-      </div>
+<h3>PrivyData</h3>
+<p>Runs statistical queries on student data under differential privacy
+(OpenDP), so you can do aggregate analysis without being able to recover
+any individual's records. Python/Flask.</p>
 
-      <div class="entry">
-        <div class="head">
-          <h3>JobTrackr</h3>
-        </div>
-        <p>
-          Full-stack job application tracker with accounts and stats on your
-          search history. An excuse to learn Kubernetes, mostly.
-        </p>
-        <div class="stack">typescript · react · postgres · kubernetes · ansible</div>
-      </div>
-    </section>
+<h3>JobTrackr</h3>
+<p>Job application tracker with accounts and stats. Mostly an excuse to
+learn Kubernetes. React/TypeScript/Postgres.</p>
 
-    <section>
-      <h2>Skills</h2>
-      <dl class="skills">
-        <dt>languages</dt>
-        <dd>Python, TypeScript, Swift, Kotlin, Java, Rust, C/C++, C#, SQL</dd>
-        <dt>frameworks</dt>
-        <dd>React, SwiftUI, Jetpack Compose, FastAPI, Flask, Node, Svelte</dd>
-        <dt>infra</dt>
-        <dd>Postgres, Supabase, AWS, Azure, Docker, Terraform, Nginx, Linux</dd>
-      </dl>
-    </section>
+<h2>Etc.</h2>
+<p>Day to day I write Python, TypeScript, Swift, and Kotlin, with a lot of
+Postgres. I've also shipped things in Java, Rust, C++, and C#. Comfortable
+with AWS, Azure, Docker, and Terraform.</p>
 
-    <footer>
-      Purdue CS '24 · <a href="mailto:seanthomasthedev@gmail.com">seanthomasthedev@gmail.com</a>
-    </footer>
+<hr>
+<p class="quiet small">Last updated June 2026.</p>
 
-  </div>
 </body>
 </html>
