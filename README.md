@@ -24,6 +24,24 @@ Wayne, and studied CS and math at Purdue (class of 2024).
 
 ## Projects
 
+### [peripheral](https://github.com/SeanCThomas0/peripheral)
+
+Peripheral vision for agents — an MCP server that watches a screen region for
+change at near-zero token cost, so an agent only spends a screenshot once
+something actually happens. Instead of polling with screenshots (~1,000 image
+tokens per glance), it feeds the region to an H.264 encoder and reads the coded
+frame sizes: unchanged frames code as a few dozen bytes of skip blocks, and real
+changes jump the size by orders of magnitude. Waiting 30 minutes costs ~1,450
+tokens instead of ~456,000. Node/TypeScript.
+
+### [FSI Chinese Practice](https://github.com/SeanCThomas0/fsi-chinese-practice)
+
+A zero-dependency web app for practicing spoken Mandarin with the public-domain
+FSI Standard Chinese course — A-B section looping, record & compare against the
+native speaker, tone-pair drills across all 20 combinations, stroke-order
+writing practice, and offline support as an installable PWA.
+[Live app](https://seancthomas0.github.io/fsi-chinese-practice/).
+
 ### Kald
 
 A location-based prediction market — native iOS (SwiftUI) and Android (Jetpack
