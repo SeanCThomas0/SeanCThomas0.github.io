@@ -42,7 +42,7 @@ native speaker, tone-pair drills across all 20 combinations, stroke-order
 writing practice, and offline support as an installable PWA.
 [Live app](https://seancthomas0.github.io/fsi-chinese-practice/).
 
-### [Kald](https://github.com/SeanCThomas0/kald)
+### Kald
 
 A location-based prediction market — native iOS (SwiftUI) and Android (Jetpack
 Compose) apps on a Postgres/Supabase backend. The interesting part is making it
