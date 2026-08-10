@@ -3,14 +3,14 @@
 Software engineer in San Francisco. This is the source for my personal site,
 [SeanCThomas0.github.io](https://SeanCThomas0.github.io).
 
-I'm a founding engineer at Tex Software, where I spend most of my time on
+I was a founding engineer at Tex Software, where I spent most of my time on
 document ingestion — OCR, entity resolution, and getting structured data out of
-25+ million messy documents. Before this I did GIS work for the City of Fort
+25+ million messy documents. Before that I did GIS work for the City of Fort
 Wayne, and studied CS and math at Purdue (class of 2024).
 
 ## Work
 
-### Tex Software — founding engineer (2026–present)
+### Tex Software — founding engineer (Jan 2026 – Jun 2026)
 
 - Built the OCR/document-ingestion pipeline, which has processed over 25 million documents so far.
 - Entity resolution and record linkage to dedupe records across sources that all disagree with each other.
@@ -42,7 +42,7 @@ native speaker, tone-pair drills across all 20 combinations, stroke-order
 writing practice, and offline support as an installable PWA.
 [Live app](https://seancthomas0.github.io/fsi-chinese-practice/).
 
-### Kald
+### [Kald](https://github.com/SeanCThomas0/kald)
 
 A location-based prediction market — native iOS (SwiftUI) and Android (Jetpack
 Compose) apps on a Postgres/Supabase backend. The interesting part is making it
